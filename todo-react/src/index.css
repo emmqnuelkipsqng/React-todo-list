@@ -1,17 +1,18 @@
-/*RESETS*/
+/* RESETS */
 *,
-*::after,
+*::before,
 *::after {
   box-sizing: border-box;
 }
 *:focus {
-  outline: 3px dashed #e2ebf4;
+  outline: 3px dashed #228bec;
   outline-offset: 0;
 }
 html {
-  font: 62.5% / 1.15 san-serif;
+  font: 62.5% / 1.15 sans-serif;
 }
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 0;
 }
 ul {
@@ -35,13 +36,18 @@ button {
 button::-moz-focus-inner {
   border: 0;
 }
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
-button, input {
+button,
+input {
   overflow: visible;
 }
 input[type="text"] {
@@ -51,7 +57,7 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, san-serif;
+  font: 1.6rem/1.25 Arial, sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -61,14 +67,14 @@ body {
     line-height: 1.31579;
   }
 }
-/*End RESET*/
-/*GLOBAL STYLES*/
+/*END RESETS*/
+/* GLOBAL STYLES */
 .form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
 }
-button {
-  padding: 0.8rem, 1rem, 0.7rem;
+.btn {
+  padding: 0.8rem 1rem 0.7rem;
   border: 0.2rem solid #4d4d4d;
   cursor: pointer;
   text-transform: capitalize;
@@ -77,29 +83,30 @@ button {
   border-width: 1px;
   border-color: #d3d3d3;
 }
-.btn.btn.toggle-btn[aria-pressed="true"] {
-  text-decoration: none;
+.btn.toggle-btn[aria-pressed="true"] {
+  text-decoration: underline;
   border-color: #4d4d4d;
 }
-.btn_danger {
+.btn__danger {
   color: #fff;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
-.button_filter {
+.btn__filter {
   border-color: lightgrey;
 }
-.button_primary {
+.btn__primary {
   color: #fff;
+  background-color: #000;
 }
-.button-group {
+.btn-group {
   display: flex;
   justify-content: space-between;
 }
-.button-group > * {
+.btn-group > * {
   flex: 1 1 49%;
 }
-.button-group > * + * {
+.btn-group > * + * {
   margin-left: 0.8rem;
 }
 .label-wrapper {
@@ -107,7 +114,7 @@ button {
   flex: 0 0 100%;
   text-align: center;
 }
-.vissualy-hidden {
+.visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -137,11 +144,11 @@ button {
 .stack-exception {
   margin-top: 1.2rem;
 }
-/*END GLOBALSTYLES*/
+/* END GLOBAL STYLES */
 .todoapp {
   background: #fff;
   margin: 2rem 0 4rem 0;
-  padding: 1 rem;
+  padding: 1rem;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
